@@ -6,8 +6,8 @@ import { GET_CATEGORIES_MOCK as useGetCategoriesQuery, GET_SERVICES_MOCKS as use
 import { Button } from "../../atoms/Button/button";
 import { NavButton } from "../../atoms/NavButton/navButton";
 import { Comments } from "../../organisms/Comments/comments";
-import { GirlCard } from "../../molecules/GirlCard/girlCard";
 import { Footer } from "../../molecules/Footer/footer";
+import { HOME_TEXTS } from "../../../lib/constants/homeConstants";
 import { GirlList } from "../../organisms/GirlList/girlList";
 export const GirlsPage = () => {
 
@@ -55,8 +55,13 @@ export const GirlsPage = () => {
                     <ul className={styles.girls__large_background__preview__list}>
                         <GirlList girls={girls} />
                     </ul>
+                    
+
 
                 </section>
+                
+                
+
                 <Comments comments={comments} />
                 <Footer />
             </div>

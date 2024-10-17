@@ -1,4 +1,4 @@
-import { Service, Comment, Women, WomenStatus, UserStatus, Category, User, MultimediaType, SubService } from "../lib/types/types.d.ts"
+import { Service, Comment, Women, WomenStatus, UserStatus, Category, User, MultimediaType, SubService } from "../lib/types/types.ts"
 
 const exampleSubService: SubService = {
     quantity: 1,
@@ -20,7 +20,7 @@ const exampleSubService: SubService = {
 const exampleService: Service = {
     description: 'example',
     idService: 1,
-    title: 'example',
+    title: "",
     subServices: new Array(9).fill(undefined).map((_, index) => { return { ...exampleSubService, idSubService: index } }),
     women: []
 }
@@ -40,7 +40,7 @@ const exampleGirl: Women = {
     idWomen: 1,
     mediaList: new Array(15).fill({ url: '', mediaType: MultimediaType.PHOTO, idMedia: 1 }).map((item, index) => (index % 2 === 0 ? item : { ...item, mediaType: MultimediaType.VIDEO })),
     piercings: 0,
-    services: new Array(5).fill(undefined).map((_, index) => { return { ...exampleService, idService: index } }),
+    services: new Array(4).fill(undefined).map((_, index) => { return { ...exampleService, idService: index } }),
     shaving: 'shaved',
     shoeSize: 38,
     smoker: 'no',
@@ -51,7 +51,7 @@ const exampleGirl: Women = {
         comments: [],
         gender: '',
         id_user: 1,
-        nacionality: 'Colombian',
+        nacionality: 'Edad 22',
         password: '',
         phoneNumber: '',
         profile_photo: '',
@@ -92,9 +92,9 @@ const exampleUser: User = {
 export const GET_HOME_IMAGES_MOCK = async (): Promise<Array<string>> => {
     return new Promise((resolve) => {
         resolve([
-            '/public/assets/mockAssets/Girl1.png',
-            '/public/assets/mockAssets/Girl2.png',
-            '/public/assets/mockAssets/Girl3.png',
+            '/assets/mockAssets/Girl1.png',
+            '/assets/mockAssets/Girl2.png',
+            '/assets/mockAssets/Girl3.png',
         ])
     })
 }
@@ -223,7 +223,8 @@ export const GET_GIRLS_MOCK = async (): Promise<Array<Women>> => {
 
 export const GET_GIRL_INFO_MOCK = async (girlId: string): Promise<Women> => {
     return new Promise((resolve, reject) => {
-        if (girlId === '1094892672')
+        const girlIds = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+        if (girlIds.includes(girlId))
             resolve(exampleGirl)
         else
             reject('Girl not found')
