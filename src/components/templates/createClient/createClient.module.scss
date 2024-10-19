@@ -1,0 +1,121 @@
+@import '/src/lib/styles/colors.scss';
+
+.createClientPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: black;
+  border-radius: 20px;
+
+  &__default_section {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+    padding: 2rem;
+    background-color: rgba(255, 0, 0, 0.2);
+    color: #333;
+  }
+
+  .loginPage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: $black-background-color;
+    background-image: url('/path/to/your/background-image.png'); // Asegúrate de cambiar esta ruta
+    background-size: cover;
+    padding: 0 15%;
+  }
+
+  .loginContainer {
+    max-width: 400px;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: $main-text-color;
+  }
+
+  .errorMessage,
+  .successMessage {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .inputGroup {
+    margin-bottom: 20px;
+  }
+
+  .input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+  }
+
+  .submitButton {
+    padding: 10px 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background-color: $red-background-color;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .submitButton:disabled {
+    background-color: $disabled-color;
+    cursor: not-allowed;
+  }
+
+  label {
+    color: white;
+    display: flex;
+  }
+
+  @media (max-width: 768px) {
+    .loginContainer {
+      padding: 1rem;
+      max-width: 90%;
+    }
+
+    .title {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .input {
+      padding: 8px;
+      font-size: 14px;
+    }
+
+    .submitButton {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+}
