@@ -1,8 +1,9 @@
+
 import { useState } from "react";
 import { Comment as type } from "../../../lib/types/types"
 import { StarRate } from "../StarRate/StarRate";
-import { UserIcon } from "../UserIcon/userIcon";
 import styles from './comment.module.scss';
+
 import { Delete, Edit } from "@mui/icons-material";
 import axios from "axios";
 import { AlertModal, AlertModalProps } from "../../molecules/AlertModal/alertModal";

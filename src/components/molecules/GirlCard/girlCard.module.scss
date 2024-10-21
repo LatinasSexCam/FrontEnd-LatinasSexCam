@@ -17,7 +17,7 @@
         background-color: $black-background-color;
         align-self: center;
         object-fit: cover;
-    };
+    }
 
     &__info {
         display: flex;
@@ -31,6 +31,25 @@
             width: 100%;
             gap: 5px;
         }
+    }
+
+    &__name {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    &__flag {
+        width: 20px;
+        display: flex;
+        justify-content: space-around;  
+        height: auto;
+        object-fit: contain;
+        vertical-align: middle;
+    }
+
+    &__age {
+        font-size: 0.9rem;
+        margin: 0;
     }
 
     &__button {
