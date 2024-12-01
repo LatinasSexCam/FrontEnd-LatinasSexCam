@@ -57,11 +57,9 @@
 
 }
 .main {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
-    background-image: url('/public/assets/large-background.png');
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
   }
   
   .profileContainer {
@@ -76,8 +74,7 @@
   .profileHeader {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 3rem;
+    margin-bottom: 1.5rem;
   }
   
   .photoContainer {
@@ -85,8 +82,8 @@
   }
   
   .photoPlaceholder {
-    width: 10rem;
-    height: 10rem;
+    width: 4rem;
+    height: 4rem;
     background-color: #4a5568;
     border-radius: 50%;
     display: flex;
@@ -130,13 +127,12 @@
   
   .username {
     color: #ecc94b;
-    font-size: 4rem;
+    font-size: 1.25rem;
     font-weight: bold;
   }
   
   .userDescription {
-    color: white;
-    font-size: 1.5rem;
+    color: #a0aec0;
   }
   
   .webcamContainer {
@@ -156,11 +152,7 @@
   .commentsHeader {
     color: #ecc94b;
     font-weight: bold;
-    padding: 2rem 0;
-    margin: 0 auto;
-    width: fit-content;
-    margin-top: 30px;
-    font-size: 1.7rem;
+    margin-bottom: 1rem;
   }
   
 .commentBox {

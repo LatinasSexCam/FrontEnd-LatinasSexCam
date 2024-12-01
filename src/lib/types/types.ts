@@ -101,6 +101,7 @@ export interface Comment {
     stars: number;
     createdAt: string; // Consider using Date type if you convert this string into a Date object
     user: User;
+    userName: string;
 }
 
 
@@ -109,4 +110,13 @@ export interface CategoryFilter {
     idCategoryFilter: number;
     name: string;
     women: Women[];
+}
+
+//LoginResponse
+
+export interface LoginResponse {
+    sub: string;
+    exp: number;
+    nombre: string;
+    rol: Role;
 }
